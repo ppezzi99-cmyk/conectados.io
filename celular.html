@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o Celular - Conectados</title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Conectando o mesmo CSS do site -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<a href="index.html" class="botao-topo-flutuante" title="Voltar para a Página Inicial">
+        <i class="fa-solid fa-house"></i>
+    </a>
+<body>
+
+    <!-- Botão de Voltar para a Página Inicial -->
+    <div style="max-width: 650px; margin: 20px auto; text-align: left; padding: 0 15px;">
+        <a href="index.html" class="btn" style="display: inline-flex; width: auto; padding: 12px 20px; font-size: 16px;">
+            <i class="fa-solid fa-arrow-left"></i> Voltar para a Página Inicial
+        </a>
+    </div>
+
+    <!-- Título da Seção -->
+    <div class="search-box" style="margin-bottom: 30px;">
+        <h1 style="color: #2C3E50; font-size: 28px; margin-bottom: 10px;">
+            <i class="fa-solid fa-mobile-screen-button" style="color: #D4A373;"></i> Usando o Celular do Zero
+        </h1>
+        <p style="font-size: 16px; color: #555;">
+            Aqui você aprende o básico para mexer no aparelho com tranquilidade e sem medo de errar. Clique em um dos tópicos abaixo para ver os detalhes.
+        </p>
+    </div>
+
+    <!-- Lista de Tutoriais Passo a Passo (Com clique para abrir os Modais) -->
+    <div class="grid-buttons">
+        
+        <div class="btn" onclick="abrirModal('modalVoz')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-microphone"></i> 1. Ativar Comando de Voz</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                O comando de voz no celular serve para controlar o aparelho e executar tarefas no dia a dia, sem usar as mãos ou digitar. 
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalDesligar')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-power-off"></i> 2. Desligando o Celular</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+               Saiba como ajustar e desligar seu aparelho quando necessário.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalReiniciar')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-rotate-right"></i> 3. Reiniciando o Celular</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Saiba como ajustar e reiniciar seu aparelho quando necessário.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalModoFacil')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-eye"></i> 4. Ativando e Desativando Modo Fácil</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Alguns modelos de celulares possuem a função de MODO FÁCIL, sendo ideal para quem possui dificuldade de enxergar.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalFonte')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-font"></i> 5. Como Aumentar a Fonte (Letra)</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Aumente os textos no celular para facilitar a leitura.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalBrilho')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-sun"></i> 6. Como Ajustar o Brilho da Tela</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Ajuste o brilho da tela para evitar forçar a visão enquanto utiliza seu celular.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalVolume')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-volume-high"></i> 7. Como Ajustar o Volume</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Ajustar o volume facilita para ouvir quando está recebendo alguma ligação, ouvindo música ou vídeos.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalToques')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-bell"></i> 8. Selecionando os Toques para Chamadas</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Configurando os toques de chamadas é possível facilitar saber se recebe alguma ligação normal ou via WhatsApp.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalAlarme')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-clock"></i> 9. Criando Alarme Despertador</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Não perca a hora de acordar, tomar sua medicação nos horários corretos ou até lembrar daquele compromisso importante.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalLigacoes')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-phone"></i> 10. Como Atender e Fazer Ligações</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Aprenda a fazer uma ligação para algum contato ou atender aquela ligação que pode ser importante.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalContatos')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-address-book"></i> 11. Adicionando Contatos ao Celular</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Adicione na agenda do celular, os contatos de pessoas ou instituições importantes pra você.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalSpam')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-ban"></i> 12. Controle de Ligações Indesejadas (SPAM)</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Seguem algumas configurações e dicas para bloquear e restringir ligações indesejadas que geram incômodo.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalFotos')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-camera"></i> 13. Como Tirar e Enviar Fotos</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Saiba registrar aquele momento especial e compartilhar com as pessoas que fazem parte de sua vida.
+            </p>
+        </div>
+
+        <div class="btn" onclick="abrirModal('modalVideos')" style="cursor: pointer; display: block; text-align: left; margin-bottom: 15px;">
+            <h3 style="color: #004080; margin-top: 0; font-size: 20px;"><i class="fa-solid fa-video"></i> 14. Como Gravar e Enviar Vídeos</h3>
+            <p style="font-size: 16px; color: #444; font-weight: normal; margin-bottom: 0;">
+                Saiba como gravar um vídeo e compartilhar com seus amigos e familiares.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- ================= JANELAS FLUTUANTES (MODAIS) PARA OS DETALHES ================= -->
+
+    <!-- 1. Comando de Voz -->
+    <div id="modalVoz" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-microphone"></i> Ativar Comando de Voz</h2>
+            <p style="font-size: 16px; color: #444;">O comando de voz serve para controlar o aparelho e executar tarefas sem digitar:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li><b>No Android:</b> Diga "Ok Google" ou mantenha o botão central pressionado.</li>
+                <li><b>No iPhone:</b> Diga "E aí Siri" ou aperte o botão lateral.</li>
+                <li><b>Dica:</b> Você pode pedir para ligar para alguém ou mandar uma mensagem de voz!</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalVoz')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 2. Desligar o Celular -->
+    <div id="modalDesligar" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-power-off"></i> Desligando o Celular</h2>
+            <p style="font-size: 16px; color: #444;">Para desligar o seu aparelho com segurança:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Mantenha pressionados ao mesmo tempo o **Botão Lateral (Liga/Desliga)** e o **Botão de Aumentar ou Diminuir o Volume**.</li>
+                <li>Um menu vai aparecer na tela.</li>
+                <li>Toque na opção **"Desligar"** ou arraste o ícone indicado para desligar.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalDesligar')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 3. Reiniciar o Celular -->
+    <div id="modalReiniciar" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-rotate-right"></i> Reiniciando o Celular</h2>
+            <p style="font-size: 16px; color: #444;">Reiniciar ajuda a corrigir pequenos travamentos:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Pressione o botão **Liga/Desliga** junto com o **Volume** até aparecer o menu.</li>
+                <li>Toque na opção **"Reiniciar"** (geralmente com um ícone de seta circular).</li>
+                <li>Aguarde alguns instantes até o aparelho ligar sozinho novamente.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalReiniciar')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 4. Modo Fácil -->
+    <div id="modalModoFacil" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-eye"></i> Ativando e Desativando Modo Fácil</h2>
+            <p style="font-size: 16px; color: #444;">O Modo Fácil aumenta os ícones e simplifica a tela:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra os **Configurações** (ícone de engrenagem).</li>
+                <li>Procure pela opção **Visor** ou **Tela Inicial**.</li>
+                <li>Ative o **Modo Fácil** ou **Modo Simples** para deixar os botões bem grandes e fáceis de tocar.</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalModoFacil')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 5. Aumentar a Fonte -->
+    <div id="modalFonte" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-font"></i> Como Aumentar a Fonte (Letra)</h2>
+            <p style="font-size: 16px; color: #444;">Para ler sem esforço:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Vá em **Configurações** / **Ajustes**.</li>
+                <li>Entre em **Visor** ou **Tela**.</li>
+                <li>Toque em **Tamanho e estilo da fonte** e arraste a barra para o tamanho que achar melhor.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalFonte')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 6. Ajustar o Brilho -->
+    <div id="modalBrilho" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-sun"></i> Como Ajustar o Brilho da Tela</h2>
+            <p style="font-size: 16px; color: #444;">Proteja sua visão ajustando a claridade:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Deslize o dedo de cima para baixo na tela duas vezes para abrir o **Painel Rápido**.</li>
+                <li>Mova a barrinha de brilho (com o símbolo de sol) para a esquerda para escurecer ou para a direita para clarear.</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalBrilho')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 7. Ajustar o Volume -->
+    <div id="modalVolume" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-volume-high"></i> Como Ajustar o Volume</h2>
+            <p style="font-size: 16px; color: #444;">Use os botões na lateral do aparelho:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li><b>Botão Superior (+):</b> Aumenta o volume do toque e das chamadas.</li>
+                <li><b>Botão Inferior (-):</b> Diminui o som.</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalVolume')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 8. Toques para Chamadas -->
+    <div id="modalToques" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-bell"></i> Selecionando os Toques</h2>
+            <p style="font-size: 16px; color: #444;">Personalize o som do seu celular:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra as **Configurações** e vá em **Sons e Vibração**.</li>
+                <li>Toque em **Toque** para escolher uma música ou som agradável para ligações comuns.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalToques')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 9. Alarme Despertador -->
+    <div id="modalAlarme" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-clock"></i> Criando Alarme Despertador</h2>
+            <p style="font-size: 16px; color: #444;">Para não perder horários importantes:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Procure pelo aplicativo **Relógio** no seu celular.</li>
+                <li>Toque no botão de adição **(+)** ou em **Criar Alarme**.</li>
+                <li>Defina a hora, os minutos e os dias da semana em que o alarme deve tocar e salve.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalAlarme')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 10. Atender e Fazer Ligações -->
+    <div id="modalLigacoes" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-phone"></i> Atender e Fazer Ligações</h2>
+            <p style="font-size: 16px; color: #444;">Falar com quem você ama é simples:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li><b>Para atender:</b> Deslize o botão verde na tela quando o telefone estiver tocando.</li>
+                <li><b>Para ligar:</b> Abra o aplicativo **Telefone** (ícone de monofone), digite o número ou escolha na agenda e toque no botão verde de chamada.</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalLigacoes')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 11. Adicionando Contatos -->
+    <div id="modalContatos" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-address-book"></i> Adicionando Contatos</h2>
+            <p style="font-size: 16px; color: #444;">Guarde os telefones importantes:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra o aplicativo **Contatos** ou **Agenda**.</li>
+                <li>Toque no botão **(+)** para adicionar um novo contato.</li>
+                <li>Digite o **Nome** e o **Número de Telefone** da pessoa e toque em **Salvar**.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalContatos')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 12. Controle de SPAM -->
+    <div id="modalSpam" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-ban"></i> Controle de Ligações (SPAM)</h2>
+            <p style="font-size: 16px; color: #444;">Evite ligações comerciais incômodas:</p>
+            <ul style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra o aplicativo **Telefone**.</li>
+                <li>Toque nos três pontinhos no alto da tela e vá em **Configurações**.</li>
+                <li>Ative a opção **Identificador de Chamada e SPAM** para bloquear automaticamente números suspeitos.</li>
+            </ul>
+            <button class="botao-fechar" onclick="fecharModal('modalSpam')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 13. Tirar e Enviar Fotos -->
+    <div id="modalFotos" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-camera"></i> Como Tirar e Enviar Fotos</h2>
+            <p style="font-size: 16px; color: #444;">Registre momentos especiais:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra o aplicativo **Câmera**.</li>
+                <li>Aponte o celular para o que deseja registrar e toque no círculo branco na tela para fotografar.</li>
+                <li>Abra o WhatsApp, escolha a foto na galeria e envie para seus familiares.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalFotos')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+    <!-- 14. Gravar e Enviar Vídeos -->
+    <div id="modalVideos" class="modal-fundo">
+        <div class="modal-conteudo">
+            <h2 style="color: #004080; margin-top: 0;"><i class="fa-solid fa-video"></i> Como Gravar e Enviar Vídeos</h2>
+            <p style="font-size: 16px; color: #444;">Compartilhe vídeos em movimento:</p>
+            <ol style="font-size: 16px; color: #444; line-height: 1.6;">
+                <li>Abra o aplicativo **Câmera**.</li>
+                <li>Mude para a opção **Vídeo**.</li>
+                <li>Toque no botão vermelho ou redondo para iniciar a gravação e toque novamente para encerrar. O vídeo ficará salvo na sua galeria.</li>
+            </ol>
+            <button class="botao-fechar" onclick="fecharModal('modalVideos')">Entendi / Fechar</button>
+        </div>
+    </div>
+
+
+    <!-- Assistente Virtual Interativo Flutuante (Léo) -->
+    <div class="interactive-pet" id="petAssistant">
+        <div class="pet-avatar" onclick="mudarFala('Estou te ajudando com as dicas do celular. Toque em qualquer passo acima para ler com calma!')">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="pet-speech">
+            <strong>Léo (Assistente):</strong>
+            <span id="textoFala">Viu só? Com calma, mexer no celular fica muito fácil. Toque em qualquer tópico acima para abrir os detalhes!</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projeto Acadêmico de Inclusão Digital para a Terceira Idade</p>
+    </footer>
+
+    <!-- Script JavaScript para controlar o assistente e as janelas -->
+    <script>
+        function mudarFala(frase) {
+            document.getElementById('textoFala').innerText = frase;
+        }
+
+        function abrirModal(idModal) {
+            document.getElementById(idModal).style.display = 'flex';
+        }
+
+        function fecharModal(idModal) {
+            document.getElementById(idModal).style.display = 'none';
+        }
+// Função para subir suavemente até o topo da página
+        function voltarAoTopo() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Suas funções anteriores...
+        function mudarFala(frase) {
+            document.getElementById('textoFala').innerText = frase;
+        }
+
+        function abrirModal(idModal) {
+            document.getElementById(idModal).style.display = 'flex';
+        }
+
+        function fecharModal(idModal) {
+            document.getElementById(idModal).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
